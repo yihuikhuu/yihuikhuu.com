@@ -14,9 +14,7 @@ const classNames: Record<TitleSize, string> = {
 };
 
 const Title: React.FC<TitleProps> = ({ children, className, size }) => (
-  <h1 className={className + " transition-colors " + classNames[size]}>
-    {children}
-  </h1>
+  <h1 className={className + " transition " + classNames[size]}>{children}</h1>
 );
 
 export default Title;

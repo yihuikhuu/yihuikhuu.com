@@ -33,6 +33,8 @@ import Hero from "components/Hero";
 import IconCard, { IconType } from "components/IconCard";
 import Subtitle from "components/Subtitle";
 import Title from "components/Title";
+import { classNames } from "helpers/classnames";
+import ColourThemeContext from "contexts/colour-theme-context";
 
 const languages: IconType[] = [
   {
@@ -145,143 +147,155 @@ const experiences = [
 ];
 
 const About: NextPage = () => (
-  <>
-    <Head>
-      <title>About - Yihui Khuu</title>
-      <meta name="description" content="About Yihui Khuu" />
-    </Head>
-    <Hero className="text-left">
-      <Title size="large">
-        <span className="block">Developer.</span>
+  <ColourThemeContext.Consumer>
+    {({ theme }) => (
+      <>
+        <Head>
+          <title>About - Yihui Khuu</title>
+          <meta name="description" content="About Yihui Khuu" />
+        </Head>
+        <Hero className="text-left">
+          <Title size="large">
+            <span className="block">Developer.</span>
 
-        <motion.span
-          className="block text-violet-500 flex flex-col sm:flex-row"
-          initial="hidden"
-          animate="show"
-          variants={container}
-        >
-          <motion.span variants={variants}></motion.span>
-          <motion.span variants={variants}>Curious.</motion.span>
-          <span className="hidden sm:block">&nbsp;&nbsp;&nbsp;</span>
-          <motion.span variants={variants}>Passionate.</motion.span>
-          <span className="hidden sm:block">&nbsp;&nbsp;&nbsp;</span>
-          <motion.span variants={variants}>Experienced.</motion.span>
-        </motion.span>
-      </Title>
-      <Subtitle className="mt-3 max-w-md">
-        <motion.span
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: {
-              opacity: 0,
-            },
-            show: {
-              opacity: 1,
-              transition: {
-                delay: 3.0,
-              },
-            },
-          }}
-        >
-          Well versed in Backend, Frontend and Mobile development.
-        </motion.span>
-      </Subtitle>
-    </Hero>
-    <div>
-      <div className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[16rem] pb-16">
-          <div className="relative overflow-hidden">
-            <div>
-              <Title className="mt-16" size="base">
-                <span className="block">My Toolbox</span>
-              </Title>
-
-              {toolbox.map((t) => (
-                <Fragment key={t.name}>
-                  <Title className="mt-12" size="small">
-                    <span className="transition-colors block text-violet-600 dark:text-violet-400">
-                      {t.name}
-                    </span>
-                  </Title>
-                  <div className="mt-8 px-8 grid gap-4 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12">
-                    {t.items.map((l) =>
-                      l.href ? (
-                        <Link key={l.name} href={l.href}>
-                          <a
-                            key={l.name}
-                            target="_blank"
-                            rel="noopener nofollow"
-                          >
-                            <IconCard icon={l} />
-                          </a>
-                        </Link>
-                      ) : (
-                        <IconCard key={l.name} icon={l} />
-                      )
-                    )}
-                  </div>
-                </Fragment>
-              ))}
-            </div>
-
-            <Title className="mt-16" size="base">
-              <span className="block">My Experience</span>
-            </Title>
-
-            <ul
-              role="list"
-              className="transition-colors mt-8 divide-y divide-gray-200 dark:divide-gray-600"
+            <motion.span
+              className={classNames(
+                "flex flex-col sm:flex-row",
+                `transition-colours text-${theme}-500`
+              )}
+              initial="hidden"
+              animate="show"
+              variants={container}
             >
-              {experiences
-                .slice(0)
-                .reverse()
-                .map((experience, index) => (
-                  <li key={`experience-${index}`}>
-                    <Link href={experience.href}>
-                      <a className="transition block hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <div className="flex items-center px-4 py-6 sm:px-6">
-                          <div className="min-w-0 flex-1 flex items-center gap-8">
-                            <p className="transition-colors flex-shrink-0 dark:text-white">
-                              {(experiences.length - index)
-                                .toString()
-                                .padStart(2, "0")}
-                            </p>
-                            <div className="min-w-0 flex-1 px-4 items-center md:grid md:grid-cols-2 md:gap-4">
-                              <Title size="small">
-                                <p className="font-medium truncate">
-                                  {experience.organisation}
+              <motion.span variants={variants}></motion.span>
+              <motion.span variants={variants}>Curious.</motion.span>
+              <span className="hidden sm:block">&nbsp;&nbsp;&nbsp;</span>
+              <motion.span variants={variants}>Passionate.</motion.span>
+              <span className="hidden sm:block">&nbsp;&nbsp;&nbsp;</span>
+              <motion.span variants={variants}>Experienced.</motion.span>
+            </motion.span>
+          </Title>
+          <Subtitle className="mt-3 max-w-md">
+            <motion.span
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    delay: 3.0,
+                  },
+                },
+              }}
+            >
+              Well versed in Backend, Frontend and Mobile development.
+            </motion.span>
+          </Subtitle>
+        </Hero>
+        <div>
+          <div className="relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[16rem] pb-16">
+              <div className="relative overflow-hidden">
+                <div>
+                  <Title className="mt-16" size="base">
+                    <span className="block">My Toolbox</span>
+                  </Title>
+
+                  {toolbox.map((t) => (
+                    <Fragment key={t.name}>
+                      <Title className="mt-12" size="small">
+                        <span
+                          className={classNames(
+                            "transition-colors block",
+                            `text-${theme}-600 dark:text-${theme}-400`
+                          )}
+                        >
+                          {t.name}
+                        </span>
+                      </Title>
+                      <div className="mt-8 px-8 grid gap-4 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12">
+                        {t.items.map((l) =>
+                          l.href ? (
+                            <Link key={l.name} href={l.href}>
+                              <a
+                                key={l.name}
+                                target="_blank"
+                                rel="noopener nofollow"
+                              >
+                                <IconCard icon={l} />
+                              </a>
+                            </Link>
+                          ) : (
+                            <IconCard key={l.name} icon={l} />
+                          )
+                        )}
+                      </div>
+                    </Fragment>
+                  ))}
+                </div>
+
+                <Title className="mt-16" size="base">
+                  <span className="block">My Experience</span>
+                </Title>
+
+                <ul
+                  role="list"
+                  className="transition-colors mt-8 divide-y divide-gray-200 dark:divide-gray-600"
+                >
+                  {experiences
+                    .slice(0)
+                    .reverse()
+                    .map((experience, index) => (
+                      <li key={`experience-${index}`}>
+                        <Link href={experience.href}>
+                          <a className="transition block hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <div className="flex items-center px-4 py-6 sm:px-6">
+                              <div className="min-w-0 flex-1 flex items-center gap-8">
+                                <p className="transition-colors flex-shrink-0 dark:text-white">
+                                  {(experiences.length - index)
+                                    .toString()
+                                    .padStart(2, "0")}
                                 </p>
-                              </Title>
-                              <div>
-                                <div>
-                                  <p className="transition-colors text-sm text-gray-900 dark:text-white">
-                                    {experience.when}
-                                  </p>
+                                <div className="min-w-0 flex-1 px-4 items-center md:grid md:grid-cols-2 md:gap-4">
+                                  <Title size="small">
+                                    <p className="font-medium truncate">
+                                      {experience.organisation}
+                                    </p>
+                                  </Title>
+                                  <div>
+                                    <div>
+                                      <p className="transition-colors text-sm text-gray-900 dark:text-white">
+                                        {experience.when}
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <Subtitle className="col-span-2">
+                                    <span>{experience.description}</span>
+                                  </Subtitle>
                                 </div>
                               </div>
-                              <Subtitle className="col-span-2">
-                                <span>{experience.description}</span>
-                              </Subtitle>
+                              <div>
+                                <ArrowRightIcon
+                                  className="h-5 w-5 text-gray-400"
+                                  aria-hidden="true"
+                                />
+                              </div>
                             </div>
-                          </div>
-                          <div>
-                            <ArrowRightIcon
-                              className="h-5 w-5 text-gray-400"
-                              aria-hidden="true"
-                            />
-                          </div>
-                        </div>
-                      </a>
-                    </Link>
-                  </li>
-                ))}
-            </ul>
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </>
+      </>
+    )}
+  </ColourThemeContext.Consumer>
 );
 
 export default About;

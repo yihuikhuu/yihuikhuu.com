@@ -2,8 +2,13 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Hero from "components/Hero";
 import Title from "components/Title";
+import { useContext } from "react";
+import ColourThemeContext from "contexts/colour-theme-context";
+import { classNames } from "helpers/classnames";
 
 const Contact: NextPage = () => {
+  const { theme } = useContext(ColourThemeContext);
+
   return (
     <>
       <Head>
@@ -40,7 +45,10 @@ const Contact: NextPage = () => {
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
-                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                    className={classNames(
+                      "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
+                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                    )}
                     required
                   />
                 </div>
@@ -58,7 +66,10 @@ const Contact: NextPage = () => {
                     name="last-name"
                     id="last-name"
                     autoComplete="family-name"
-                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                    className={classNames(
+                      "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
+                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                    )}
                     required
                   />
                 </div>
@@ -76,7 +87,10 @@ const Contact: NextPage = () => {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                    className={classNames(
+                      "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
+                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                    )}
                     required
                   />
                 </div>
@@ -102,7 +116,10 @@ const Contact: NextPage = () => {
                     name="phone"
                     id="phone"
                     autoComplete="tel"
-                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                    className={classNames(
+                      "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
+                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                    )}
                     aria-describedby="phone-optional"
                   />
                 </div>
@@ -119,7 +136,10 @@ const Contact: NextPage = () => {
                     type="text"
                     name="subject"
                     id="subject"
-                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                    className={classNames(
+                      "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
+                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                    )}
                     required
                   />
                 </div>
@@ -141,7 +161,10 @@ const Contact: NextPage = () => {
                     id="message"
                     name="message"
                     rows={4}
-                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                    className={classNames(
+                      "transition-colors py-3 px-4 block w-full text-gray-900 border border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
+                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                    )}
                     aria-describedby="message-max"
                     defaultValue={""}
                     required
@@ -151,7 +174,10 @@ const Contact: NextPage = () => {
               <div className="sm:col-span-2 sm:flex sm:justify-end">
                 <button
                   type="submit"
-                  className="mt-2 w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded text-base font-medium text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 sm:w-auto"
+                  className={classNames(
+                    "mt-2 w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:w-auto",
+                    `transition-colours bg-${theme}-600 hover:bg-${theme}-700 focus:ring-${theme}-500`
+                  )}
                 >
                   Fire away
                 </button>

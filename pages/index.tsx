@@ -6,8 +6,13 @@ import Link from "next/link";
 import Hero from "components/Hero";
 import Subtitle from "components/Subtitle";
 import Title from "components/Title";
+import { classNames } from "helpers/classnames";
+import { useContext } from "react";
+import ColourThemeContext from "contexts/colour-theme-context";
 
 const Home: NextPage = () => {
+  const { theme } = useContext(ColourThemeContext);
+
   return (
     <>
       <Head>
@@ -18,7 +23,10 @@ const Home: NextPage = () => {
         <Title size="large">
           <span className="block">Hello.</span>
           <motion.span
-            className="block text-violet-500"
+            className={classNames(
+              "block",
+              `transition-colours text-${theme}-500`
+            )}
             initial="hidden"
             animate="show"
             variants={{
@@ -77,7 +85,12 @@ const Home: NextPage = () => {
               }}
             >
               <Link href="/about">
-                <a className="mt-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
+                <a
+                  className={classNames(
+                    "mt-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
+                    `transition-colours bg-${theme}-600 hover:bg-${theme}-700 focus:ring-${theme}-500`
+                  )}
+                >
                   More about me
                   <ArrowRightIcon className="ml-2 w-5 h-5" />
                 </a>
