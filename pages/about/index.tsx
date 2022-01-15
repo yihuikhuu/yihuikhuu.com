@@ -235,7 +235,7 @@ const About: NextPage = () => (
                             <div className="flex-shrink-0">
                               {(experiences.length - index)
                                 .toString()
-                                .padStart(2, 0)}
+                                .padStart(2, "0")}
                             </div>
                             <div className="min-w-0 flex-1 px-4 items-center md:grid md:grid-cols-2 md:gap-4">
                               <Title size="small">

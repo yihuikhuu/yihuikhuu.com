@@ -135,8 +135,8 @@ const AndreyevLawyers: NextPage = () => (
                 businesses and families.
               </div>
               <div>
-                I was responsible for the end-to-end development of the firm's
-                internal software systems.
+                I was responsible for the end-to-end development of the
+                firm&apos;s internal software systems.
               </div>
               <div>
                 Originally a CRM, the system quickly evolved into a full service
