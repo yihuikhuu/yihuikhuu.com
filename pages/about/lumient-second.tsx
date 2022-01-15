@@ -1,4 +1,8 @@
-import { ArrowLeftIcon, DeviceMobileIcon } from "@heroicons/react/outline";
+import {
+  ArrowLeftIcon,
+  DeviceMobileIcon,
+  GlobeAltIcon,
+} from "@heroicons/react/outline";
 import Hero from "components/Hero";
 import Subtitle from "components/Subtitle";
 import Timeline, { TimelineEntry } from "components/Timeline";
@@ -23,7 +27,7 @@ const timeline: TimelineEntry[] = [
       "Liase with client to determine and refine requirements.",
       "Implement app design according to UI/UX design documentation, and make adjustments according to client feedback.",
     ],
-    icon: DeviceMobileIcon,
+    icon: GlobeAltIcon,
     iconBackground: "bg-gray-400",
     iconList: [siCsharp, siTypescript, siDotnet, siVuedotjs],
   },

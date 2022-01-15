@@ -1,4 +1,8 @@
-import { ArrowLeftIcon, DeviceMobileIcon } from "@heroicons/react/outline";
+import {
+  ArrowLeftIcon,
+  DeviceMobileIcon,
+  GlobeAltIcon,
+} from "@heroicons/react/outline";
 import Hero from "components/Hero";
 import Subtitle from "components/Subtitle";
 import Timeline, { TimelineEntry } from "components/Timeline";
@@ -29,7 +33,7 @@ const timeline: TimelineEntry[] = [
       "Liase with users of the system to determine expected functionality, and introduced extensive tests and documentation to existing system",
       "Bridged gaps in functionality and customised provided Bootstrap theme to achieve required results",
     ],
-    icon: DeviceMobileIcon,
+    icon: GlobeAltIcon,
     iconBackground: "bg-gray-400",
     iconList: [siPython, siJavascript, siDjango, siNextdotjs, siBootstrap],
   },
@@ -40,7 +44,7 @@ const timeline: TimelineEntry[] = [
       "Redesigned and reimplemented UI in-place using TailwindCSS instead of Bootstrap for greater flexibility",
       "Championed and converted frontend to use TypeScript",
     ],
-    icon: DeviceMobileIcon,
+    icon: GlobeAltIcon,
     iconBackground: "bg-gray-400",
     iconList: [siPython, siJavascript, siDjango, siNextdotjs, siTailwindcss],
   },
@@ -55,7 +59,7 @@ const timeline: TimelineEntry[] = [
       "Designed and implemented core functionality and UI.",
       "Designed and implemented document management system, leveraging Microsoft Sharepoint/Onedrive to allow users to collaborate and share documents with ease.",
     ],
-    icon: DeviceMobileIcon,
+    icon: GlobeAltIcon,
     iconBackground: "bg-gray-400",
     iconList: [siCsharp, siTypescript, siDotnet, siVuedotjs, siTailwindcss],
   },
