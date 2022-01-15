@@ -1,7 +1,7 @@
-import "../styles/globals.css";
+import "styles/globals.css";
 import type { AppProps } from "next/app";
 import { motion } from "framer-motion";
-import Layout from "../components/Layout";
+import Layout from "components/Layout";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (

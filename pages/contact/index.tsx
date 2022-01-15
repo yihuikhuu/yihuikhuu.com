@@ -1,8 +1,8 @@
 import { NextPage } from "next";
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
 import Head from "next/head";
-import Hero from "../../components/Hero";
-import Title from "../../components/Title";
+import Hero from "components/Hero";
+import Title from "components/Title";
 
 const Contact: NextPage = () => {
   return (

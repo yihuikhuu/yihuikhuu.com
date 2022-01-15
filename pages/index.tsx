@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Hero from "../components/Hero";
-import Subtitle from "../components/Subtitle";
-import Title from "../components/Title";
+import Hero from "components/Hero";
+import Subtitle from "components/Subtitle";
+import Title from "components/Title";
 
 const Home: NextPage = () => {
   return (
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       </Hero>
 
       <div className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[27rem] sm:min-h-[21rem] md:min-h-[19rem]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[27.5rem] sm:min-h-[22.4rem] md:min-h-[20.6rem]">
           <div className="relative overflow-hidden">
             <motion.div
               className="m-1"

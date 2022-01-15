@@ -6,12 +6,16 @@ import { Fragment } from "react";
 import LetsTalkButton from "./LetsTalkButton";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "Home", href: "/", exact: true },
+  { name: "About", href: "/about", exact: false },
 ];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
+}
+
+function isActive(currentPath: string, path: string, exact: boolean) {
+  return exact ? currentPath == path : currentPath.startsWith(path);
 }
 
 const Layout: React.FC = ({ children }) => {
@@ -47,13 +51,15 @@ const Layout: React.FC = ({ children }) => {
                     <Link key={item.name} href={item.href}>
                       <a
                         className={classNames(
-                          router.pathname == item.href
+                          isActive(router.pathname, item.href, item.exact)
                             ? "bg-gray-200 text-gray-800"
                             : "text-gray-600 hover:text-gray-800 hover:bg-gray-100",
                           "transition px-3 py-2 font-medium text-sm rounded-md"
                         )}
                         aria-current={
-                          router.pathname == item.href ? "page" : undefined
+                          isActive(router.pathname, item.href, item.exact)
+                            ? "page"
+                            : undefined
                         }
                       >
                         {item.name}
@@ -95,13 +101,15 @@ const Layout: React.FC = ({ children }) => {
                       <Link key={item.name} href={item.href}>
                         <a
                           className={classNames(
-                            router.pathname == item.href
+                            isActive(router.pathname, item.href, item.exact)
                               ? "bg-gray-200 text-gray-800"
                               : "text-gray-600 hover:text-gray-800 hover:bg-gray-100",
                             "transition block px-3 py-2 rounded-md text-base font-medium text-gray-700"
                           )}
                           aria-current={
-                            router.pathname == item.href ? "page" : undefined
+                            isActive(router.pathname, item.href, item.exact)
+                              ? "page"
+                              : undefined
                           }
                         >
                           {item.name}
@@ -129,7 +137,7 @@ const Layout: React.FC = ({ children }) => {
         <LetsTalkButton className="mt-6" />
       </div>
       <div>
-        <div className="max-w-7xl mx-auto pt-12 pb-8 px-4 sm:pt-16 sm:pb-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto pt-16 pb-4 px-4 sm:pt-16 sm:pb-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-gray-400 text-sm tracking-wide">
             © 2022 Yihui Khuu
           </h2>

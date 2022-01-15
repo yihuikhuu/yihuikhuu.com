@@ -1,9 +1,4 @@
-import {
-  MailIcon,
-  CheckCircleIcon,
-  ChevronRightIcon,
-  ArrowRightIcon,
-} from "@heroicons/react/outline";
+import { ArrowRightIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Head from "next/head";
@@ -34,10 +29,10 @@ import {
   siVuedotjs,
   siWindows,
 } from "simple-icons/icons";
-import Hero from "../components/Hero";
-import IconCard, { IconType } from "../components/IconCard";
-import Subtitle from "../components/Subtitle";
-import Title from "../components/Title";
+import Hero from "components/Hero";
+import IconCard, { IconType } from "components/IconCard";
+import Subtitle from "components/Subtitle";
+import Title from "components/Title";
 
 const languages: IconType[] = [
   {
@@ -131,26 +126,27 @@ const experiences = [
     when: "2014 - 2018",
     description:
       "My first developer role. Backend, frontend, mobile, and everything in between.",
-    href: "",
+    href: "/about/lumient-first",
   },
   {
     organisation: "University of Adelaide",
     when: "2016",
     description: "Collaborative project with the best and brightest.",
-    href: "",
+    href: "/about/university-adelaide",
   },
   {
     organisation: "Andreyev Lawyers",
     when: "2019 - 2021",
-    description: "Full service legal business management software.",
-    href: "",
+    description:
+      "Full service legal business management software. Legacy and cutting edge.",
+    href: "/about/andreyev-lawyers",
   },
   {
     organisation: "Lumient",
     when: "2021 - Now",
     description:
       "Developing a comprehensive management system for the AgTech industry.",
-    href: "",
+    href: "/about/lumient-second",
   },
 ];
 
@@ -243,7 +239,9 @@ const About: NextPage = () => (
                         <div className="flex items-center px-4 py-6 sm:px-6">
                           <div className="min-w-0 flex-1 flex items-center gap-8">
                             <div className="flex-shrink-0">
-                              {experiences.length - index}
+                              {(experiences.length - index)
+                                .toString()
+                                .padStart(2, 0)}
                             </div>
                             <div className="min-w-0 flex-1 px-4 items-center md:grid md:grid-cols-2 md:gap-4">
                               <Title size="small">
