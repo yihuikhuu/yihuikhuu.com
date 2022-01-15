@@ -1,7 +1,6 @@
 import { SimpleIcon } from "simple-icons";
 import Icon from "components/Icon";
 import { classNames } from "helpers/classnames";
-import { borderColour, hoverBorderColour } from "helpers/colour-theme";
 import ColourThemeContext from "contexts/colour-theme-context";
 
 export type IconType = {
