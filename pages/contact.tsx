@@ -23,6 +23,7 @@ const Contact: NextPage = () => {
               className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               data-netlify="true"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <div>
                 <label
                   htmlFor="first-name"
