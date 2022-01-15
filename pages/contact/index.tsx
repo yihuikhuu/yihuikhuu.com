@@ -1,6 +1,8 @@
 import { NextPage } from "next";
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
 import Head from "next/head";
+import Hero from "../../components/Hero";
+import Title from "../../components/Title";
 
 const Contact: NextPage = () => {
   return (
@@ -8,17 +10,18 @@ const Contact: NextPage = () => {
       <Head>
         <title>Contact - Yihui Khuu</title>
       </Head>
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <Hero>
         <div className="relative bg-white">
           <h2 className="sr-only">Get in touch</h2>
 
-          <h1 className="text-4xl tracking-tight font-semibold text-gray-900 sm:text-5xl md:text-6xl">
+          <Title size="large">
             <span className="block">Get in touch.</span>
-          </h1>
+          </Title>
 
           <div className="py-10 lg:col-span-2 xl:py-12">
             <form
               name="contact"
+              action="/contact/success"
               method="POST"
               className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               data-netlify="true"
@@ -38,6 +41,7 @@ const Contact: NextPage = () => {
                     id="first-name"
                     autoComplete="given-name"
                     className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    required
                   />
                 </div>
               </div>
@@ -55,6 +59,7 @@ const Contact: NextPage = () => {
                     id="last-name"
                     autoComplete="family-name"
                     className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    required
                   />
                 </div>
               </div>
@@ -72,6 +77,7 @@ const Contact: NextPage = () => {
                     type="email"
                     autoComplete="email"
                     className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    required
                   />
                 </div>
               </div>
@@ -111,6 +117,7 @@ const Contact: NextPage = () => {
                     name="subject"
                     id="subject"
                     className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    required
                   />
                 </div>
               </div>
@@ -134,6 +141,7 @@ const Contact: NextPage = () => {
                     className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border border-gray-300 rounded"
                     aria-describedby="message-max"
                     defaultValue={""}
+                    required
                   />
                 </div>
               </div>
@@ -148,7 +156,7 @@ const Contact: NextPage = () => {
             </form>
           </div>
         </div>
-      </div>
+      </Hero>
     </>
   );
 };

@@ -29,9 +29,11 @@ const Layout: React.FC = ({ children }) => {
               >
                 <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
-                    <a href="#">
-                      <div className="text-xl font-semibold">Yihui Khuu</div>
-                    </a>
+                    <Link href="/">
+                      <a>
+                        <div className="text-xl font-semibold">Yihui Khuu</div>
+                      </a>
+                    </Link>
                     <div className="-mr-2 flex items-center md:hidden">
                       <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Open main menu</span>
@@ -40,7 +42,7 @@ const Layout: React.FC = ({ children }) => {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:flex md:space-x-10">
+                <div className="hidden md:flex md:space-x-4">
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a
@@ -109,7 +111,7 @@ const Layout: React.FC = ({ children }) => {
                   </div>
                   <Link href="/contact">
                     <a className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700">
-                      Lets talk
+                      Let&apos;s talk
                     </a>
                   </Link>
                 </div>
