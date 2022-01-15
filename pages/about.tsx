@@ -1,3 +1,9 @@
+import {
+  MailIcon,
+  CheckCircleIcon,
+  ChevronRightIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Head from "next/head";
@@ -119,6 +125,35 @@ const variants = {
   },
 };
 
+const experiences = [
+  {
+    organisation: "Lumient",
+    when: "2014 - 2018",
+    description:
+      "My first developer role. Backend, frontend, mobile, and everything in between.",
+    href: "",
+  },
+  {
+    organisation: "University of Adelaide",
+    when: "2016",
+    description: "Collaborative project with the best and brightest.",
+    href: "",
+  },
+  {
+    organisation: "Andreyev Lawyers",
+    when: "2019 - 2021",
+    description: "Full service legal business management software.",
+    href: "",
+  },
+  {
+    organisation: "Lumient",
+    when: "2021 - Now",
+    description:
+      "Developing a comprehensive management system for the AgTech industry.",
+    href: "",
+  },
+];
+
 const About: NextPage = () => (
   <>
     <Head>
@@ -174,7 +209,7 @@ const About: NextPage = () => (
               {toolbox.map((t) => (
                 <Fragment key={t.name}>
                   <Title className="mt-12" size="small">
-                    <span className="block">{t.name}</span>
+                    <span className="block text-violet-600">{t.name}</span>
                   </Title>
                   <div className="mt-8 px-8 grid gap-4 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12">
                     {t.items.map((l) =>
@@ -193,9 +228,53 @@ const About: NextPage = () => (
               ))}
             </div>
 
-            {/* <Title className="mt-16" size="base">
+            <Title className="mt-16" size="base">
               <span className="block">My Experience</span>
-            </Title> */}
+            </Title>
+
+            <ul role="list" className="mt-8 divide-y divide-gray-200">
+              {experiences
+                .slice(0)
+                .reverse()
+                .map((experience, index) => (
+                  <li key={`experience-${index}`}>
+                    <Link href={experience.href}>
+                      <a className="transition block hover:bg-gray-50">
+                        <div className="flex items-center px-4 py-6 sm:px-6">
+                          <div className="min-w-0 flex-1 flex items-center gap-8">
+                            <div className="flex-shrink-0">
+                              {experiences.length - index}
+                            </div>
+                            <div className="min-w-0 flex-1 px-4 items-center md:grid md:grid-cols-2 md:gap-4">
+                              <Title size="small">
+                                <p className="font-medium truncate">
+                                  {experience.organisation}
+                                </p>
+                              </Title>
+                              <div>
+                                <div>
+                                  <p className="text-sm text-gray-900">
+                                    {experience.when}
+                                  </p>
+                                </div>
+                              </div>
+                              <Subtitle className="col-span-2">
+                                <span>{experience.description}</span>
+                              </Subtitle>
+                            </div>
+                          </div>
+                          <div>
+                            <ArrowRightIcon
+                              className="h-5 w-5 text-gray-400"
+                              aria-hidden="true"
+                            />
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+            </ul>
           </div>
         </div>
       </div>
