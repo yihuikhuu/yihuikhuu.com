@@ -18,7 +18,7 @@ const Contact: NextPage = () => {
 
           <div className="py-10 lg:col-span-2 xl:py-12">
             <form
-              action="#"
+              name="contact"
               method="POST"
               className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
             >
@@ -120,9 +120,9 @@ const Contact: NextPage = () => {
                   >
                     Message
                   </label>
-                  <span id="message-max" className="text-sm text-gray-500">
+                  {/* <span id="message-max" className="text-sm text-gray-500">
                     Max. 500 characters
-                  </span>
+                  </span> */}
                 </div>
                 <div className="mt-1">
                   <textarea
