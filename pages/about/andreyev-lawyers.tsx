@@ -69,6 +69,7 @@ const AndreyevLawyers: NextPage = () => (
   <>
     <Head>
       <title>Andreyev Lawyers - Yihui Khuu</title>
+      <meta name="description" content="Yihui Khuu at Andreyev Lawyers" />
     </Head>
     <Hero>
       <Title size="large">
@@ -95,7 +96,6 @@ const AndreyevLawyers: NextPage = () => (
       </Title>
       <Subtitle className="mt-3 max-w-md">
         <motion.span
-          className="text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
           initial="hidden"
           animate="show"
           variants={{

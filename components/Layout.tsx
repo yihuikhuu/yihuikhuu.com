@@ -63,6 +63,31 @@ const Layout: React.FC = ({ children }) => {
                         </a>
                       </Link>
                       <div className="-mr-2 flex items-center md:hidden">
+                        <Switch.Group>
+                          <div className="flex items-center mr-6">
+                            <Switch.Label className="mr-2">
+                              {isDarkMode ? (
+                                <MoonIcon className="h-5 w-5 text-white" />
+                              ) : (
+                                <SunIcon className="h-5 w-5 text-gray-900" />
+                              )}
+                            </Switch.Label>
+                            <Switch
+                              checked={isDarkMode}
+                              onChange={setAndStoreIsDarkmode}
+                              className={`${
+                                isDarkMode ? "bg-gray-600" : "bg-gray-200"
+                              } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-white focus:ring-violet-500 dark:ring-offset-gray-900`}
+                              aria-label="theme-toggle"
+                            >
+                              <span
+                                className={`${
+                                  isDarkMode ? "translate-x-6" : "translate-x-1"
+                                } inline-block w-4 h-4 transform bg-white rounded-full transition-transform`}
+                              />
+                            </Switch>
+                          </div>
+                        </Switch.Group>
                         <Popover.Button className="transition-colors bg-gray-50 dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                           <span className="sr-only">Open main menu</span>
                           <MenuIcon className="h-6 w-6" aria-hidden="true" />
@@ -107,6 +132,7 @@ const Layout: React.FC = ({ children }) => {
                           className={`${
                             isDarkMode ? "bg-gray-600" : "bg-gray-200"
                           } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-white focus:ring-violet-500 dark:ring-offset-gray-900`}
+                          aria-label="theme-toggle"
                         >
                           <span
                             className={`${
@@ -186,7 +212,7 @@ const Layout: React.FC = ({ children }) => {
         </div>
         <div>
           <div className="max-w-7xl mx-auto pt-16 pb-4 px-4 sm:pt-16 sm:pb-4 sm:px-6 lg:px-8">
-            <h2 className="text-center text-gray-400 text-sm tracking-wide">
+            <h2 className="transition-colors text-center text-gray-600 text-sm tracking-wide dark:text-gray-300">
               © 2022 Yihui Khuu
             </h2>
           </div>

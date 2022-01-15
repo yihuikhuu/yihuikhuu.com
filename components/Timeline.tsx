@@ -61,12 +61,11 @@ const Timeline: React.FC<TimelineProps> = ({ className, timeline }) => (
                         {icon}
                       </span>
                     ) : (
-                      <div className="transition-colors rounded-full flex items-center justify-center h-10 w-10 p-1 bg-transparent dark:bg-white">
-                        <Icon
-                          key={`${eventIdx}-${index}`}
-                          icon={icon}
-                          size={24}
-                        />
+                      <div
+                        key={`${eventIdx}-${index}`}
+                        className="transition-colors rounded-full flex items-center justify-center h-10 w-10 p-1 bg-transparent dark:bg-white"
+                      >
+                        <Icon icon={icon} size={24} />
                       </div>
                     )
                   )}

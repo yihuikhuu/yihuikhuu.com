@@ -148,6 +148,7 @@ const About: NextPage = () => (
   <>
     <Head>
       <title>About - Yihui Khuu</title>
+      <meta name="description" content="About Yihui Khuu" />
     </Head>
     <Hero className="text-left">
       <Title size="large">
@@ -199,13 +200,19 @@ const About: NextPage = () => (
               {toolbox.map((t) => (
                 <Fragment key={t.name}>
                   <Title className="mt-12" size="small">
-                    <span className="block text-violet-500">{t.name}</span>
+                    <span className="transition-colors block text-violet-600 dark:text-violet-400">
+                      {t.name}
+                    </span>
                   </Title>
                   <div className="mt-8 px-8 grid gap-4 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12">
                     {t.items.map((l) =>
                       l.href ? (
                         <Link key={l.name} href={l.href}>
-                          <a key={l.name} target="_blank">
+                          <a
+                            key={l.name}
+                            target="_blank"
+                            rel="noopener nofollow"
+                          >
                             <IconCard icon={l} />
                           </a>
                         </Link>

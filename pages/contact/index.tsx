@@ -8,6 +8,7 @@ const Contact: NextPage = () => {
     <>
       <Head>
         <title>Contact - Yihui Khuu</title>
+        <meta name="description" content="Contact Yihui Khuu" />
       </Head>
       <Hero>
         <div className="relative">

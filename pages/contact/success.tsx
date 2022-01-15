@@ -10,6 +10,7 @@ const Success: NextPage = () => (
   <>
     <Head>
       <title>Success - Yihui Khuu</title>
+      <meta name="description" content="Message sent to Yihui Khuu" />
     </Head>
     <Hero>
       <Title size="large">
