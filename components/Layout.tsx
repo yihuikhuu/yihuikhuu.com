@@ -109,7 +109,7 @@ const Layout: React.FC = ({ children }) => {
                   </div>
                   <Link href="/contact">
                     <a className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700">
-                      Let's talk
+                      Lets talk
                     </a>
                   </Link>
                 </div>
