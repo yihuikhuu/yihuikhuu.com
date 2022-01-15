@@ -15,7 +15,7 @@ const Success: NextPage = () => (
       <Title size="large">
         <span className="block">Message received.</span>
         <motion.span
-          className="block text-violet-600"
+          className="block text-violet-500"
           initial="hidden"
           animate="show"
           variants={{
@@ -36,7 +36,7 @@ const Success: NextPage = () => (
     </Hero>
 
     <div className="relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[27.25rem] sm:min-h-[21rem] md:min-h-[23rem]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[27.4rem] sm:min-h-[21.9rem] md:min-h-[23.1rem]">
         <div className="relative overflow-hidden">
           <motion.div
             className="m-1"

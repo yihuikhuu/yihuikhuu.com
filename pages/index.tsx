@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <Title size="large">
           <span className="block">Hello.</span>
           <motion.span
-            className="block text-violet-600"
+            className="block text-violet-500"
             initial="hidden"
             animate="show"
             variants={{
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       </Hero>
 
       <div className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[27.5rem] sm:min-h-[22.4rem] md:min-h-[20.6rem]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[27.6rem] sm:min-h-[22.4rem] md:min-h-[20.6rem]">
           <div className="relative overflow-hidden">
             <motion.div
               className="m-1"

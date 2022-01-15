@@ -10,7 +10,7 @@ const Contact: NextPage = () => {
         <title>Contact - Yihui Khuu</title>
       </Head>
       <Hero>
-        <div className="relative bg-white">
+        <div className="relative">
           <h2 className="sr-only">Get in touch</h2>
 
           <Title size="large">
@@ -29,7 +29,7 @@ const Contact: NextPage = () => {
               <div>
                 <label
                   htmlFor="first-name"
-                  className="block text-sm font-medium text-gray-900"
+                  className="transition-colors block text-sm font-medium text-gray-900 dark:text-white"
                 >
                   First name
                 </label>
@@ -39,7 +39,7 @@ const Contact: NextPage = () => {
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
-                    className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
                     required
                   />
                 </div>
@@ -47,7 +47,7 @@ const Contact: NextPage = () => {
               <div>
                 <label
                   htmlFor="last-name"
-                  className="block text-sm font-medium text-gray-900"
+                  className="transition-colors block text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Last name
                 </label>
@@ -57,7 +57,7 @@ const Contact: NextPage = () => {
                     name="last-name"
                     id="last-name"
                     autoComplete="family-name"
-                    className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
                     required
                   />
                 </div>
@@ -65,7 +65,7 @@ const Contact: NextPage = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-900"
+                  className="transition-colors block text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Email
                 </label>
@@ -75,7 +75,7 @@ const Contact: NextPage = () => {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
                     required
                   />
                 </div>
@@ -84,11 +84,14 @@ const Contact: NextPage = () => {
                 <div className="flex justify-between">
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-900"
+                    className="transition-colors block text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Phone
                   </label>
-                  <span id="phone-optional" className="text-sm text-gray-500">
+                  <span
+                    id="phone-optional"
+                    className="transition-colors text-sm text-gray-500 dark:text-gray-400"
+                  >
                     Optional
                   </span>
                 </div>
@@ -98,7 +101,7 @@ const Contact: NextPage = () => {
                     name="phone"
                     id="phone"
                     autoComplete="tel"
-                    className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
                     aria-describedby="phone-optional"
                   />
                 </div>
@@ -106,7 +109,7 @@ const Contact: NextPage = () => {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="subject"
-                  className="block text-sm font-medium text-gray-900"
+                  className="transition-colors block text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Subject
                 </label>
@@ -115,7 +118,7 @@ const Contact: NextPage = () => {
                     type="text"
                     name="subject"
                     id="subject"
-                    className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded"
+                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
                     required
                   />
                 </div>
@@ -124,7 +127,7 @@ const Contact: NextPage = () => {
                 <div className="flex justify-between">
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-900"
+                    className="transition-colors block text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Message
                   </label>
@@ -137,7 +140,7 @@ const Contact: NextPage = () => {
                     id="message"
                     name="message"
                     rows={4}
-                    className="py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border border-gray-300 rounded"
+                    className="transition-colors py-3 px-4 block w-full text-gray-900 focus:ring-violet-500 focus:border-violet-500 border border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white"
                     aria-describedby="message-max"
                     defaultValue={""}
                     required

@@ -75,7 +75,7 @@ const AndreyevLawyers: NextPage = () => (
         <span className="block">Andreyev Lawyers.</span>
 
         <motion.span
-          className="block text-violet-600"
+          className="block text-violet-500"
           initial="hidden"
           animate="show"
           variants={{
@@ -133,7 +133,7 @@ const AndreyevLawyers: NextPage = () => (
               },
             }}
           >
-            <div>
+            <div className="transition-colors dark:text-white">
               <div>
                 Andreyev Lawyers provides personalised legal services for
                 businesses and families.
@@ -149,7 +149,7 @@ const AndreyevLawyers: NextPage = () => (
               </div>
             </div>
 
-            <Timeline className="mt-16 -mb-8 pb-8" timeline={timeline} />
+            <Timeline className="mt-16 -mb-8 pb-8 px-3" timeline={timeline} />
 
             <Link href="/about">
               <a className="my-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">

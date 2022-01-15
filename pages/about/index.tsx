@@ -154,7 +154,7 @@ const About: NextPage = () => (
         <span className="block">Developer.</span>
 
         <motion.span
-          className="block text-violet-600 flex flex-col sm:flex-row"
+          className="block text-violet-500 flex flex-col sm:flex-row"
           initial="hidden"
           animate="show"
           variants={container}
@@ -199,7 +199,7 @@ const About: NextPage = () => (
               {toolbox.map((t) => (
                 <Fragment key={t.name}>
                   <Title className="mt-12" size="small">
-                    <span className="block text-violet-600">{t.name}</span>
+                    <span className="block text-violet-500">{t.name}</span>
                   </Title>
                   <div className="mt-8 px-8 grid gap-4 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12">
                     {t.items.map((l) =>
@@ -222,21 +222,24 @@ const About: NextPage = () => (
               <span className="block">My Experience</span>
             </Title>
 
-            <ul role="list" className="mt-8 divide-y divide-gray-200">
+            <ul
+              role="list"
+              className="transition-colors mt-8 divide-y divide-gray-200 dark:divide-gray-600"
+            >
               {experiences
                 .slice(0)
                 .reverse()
                 .map((experience, index) => (
                   <li key={`experience-${index}`}>
                     <Link href={experience.href}>
-                      <a className="transition block hover:bg-gray-50">
+                      <a className="transition block hover:bg-gray-50 dark:hover:bg-gray-600">
                         <div className="flex items-center px-4 py-6 sm:px-6">
                           <div className="min-w-0 flex-1 flex items-center gap-8">
-                            <div className="flex-shrink-0">
+                            <p className="transition-colors flex-shrink-0 dark:text-white">
                               {(experiences.length - index)
                                 .toString()
                                 .padStart(2, "0")}
-                            </div>
+                            </p>
                             <div className="min-w-0 flex-1 px-4 items-center md:grid md:grid-cols-2 md:gap-4">
                               <Title size="small">
                                 <p className="font-medium truncate">
@@ -245,7 +248,7 @@ const About: NextPage = () => (
                               </Title>
                               <div>
                                 <div>
-                                  <p className="text-sm text-gray-900">
+                                  <p className="transition-colors text-sm text-gray-900 dark:text-white">
                                     {experience.when}
                                   </p>
                                 </div>
