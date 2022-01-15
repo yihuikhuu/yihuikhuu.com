@@ -1,5 +1,5 @@
 import { SimpleIcon } from "simple-icons";
-import Icon from "./Icon";
+import Icon from "components/Icon";
 
 export type IconType = {
   name: string;

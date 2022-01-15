@@ -1,24 +1,88 @@
-import { ArrowLeftIcon } from "@heroicons/react/outline";
+import { ArrowLeftIcon, DeviceMobileIcon } from "@heroicons/react/outline";
 import Hero from "components/Hero";
+import Subtitle from "components/Subtitle";
+import Timeline, { TimelineEntry } from "components/Timeline";
 import Title from "components/Title";
 import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import {
+  siCsharp,
+  siDotnet,
+  siTypescript,
+  siVuedotjs,
+} from "simple-icons/icons";
 
-const LumientFirst: NextPage = () => (
+const timeline: TimelineEntry[] = [
+  {
+    header: "Web - ASP.NET and Vue.js",
+    shortDescription: "AgTech Management System",
+    content: [
+      "Designed and implemented architecture of software application.",
+      "Liase with client to determine and refine requirements.",
+      "Implement app design according to UI/UX design documentation, and make adjustments according to client feedback.",
+    ],
+    icon: DeviceMobileIcon,
+    iconBackground: "bg-gray-400",
+    iconList: [siCsharp, siTypescript, siDotnet, siVuedotjs],
+  },
+];
+
+const LumientSecond: NextPage = () => (
   <>
     <Head>
       <title>Lumient - Yihui Khuu</title>
     </Head>
     <Hero>
-      <Title size="large">Coming soon.</Title>
+      <Title size="large">
+        <span className="block">Lumient.</span>
+
+        <motion.span
+          className="block text-violet-600"
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {
+              opacity: 0,
+            },
+            show: {
+              opacity: 1,
+              transition: {
+                delay: 0.75,
+              },
+            },
+          }}
+        >
+          Fullstack Web + DevOps.
+        </motion.span>
+      </Title>
+      <Subtitle className="mt-3 max-w-md">
+        <motion.span
+          className="text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {
+              opacity: 0,
+            },
+            show: {
+              opacity: 1,
+              transition: {
+                delay: 1.5,
+              },
+            },
+          }}
+        >
+          2021 - Now
+        </motion.span>
+      </Subtitle>
     </Hero>
     <div className="relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[32.4rem] sm:min-h-[27.9rem] md:min-h-[26.9rem]">
         <div className="relative overflow-hidden">
           <motion.div
-            className="m-1"
+            className="mx-1 mt-16"
             initial="hidden"
             animate="show"
             variants={{
@@ -28,13 +92,26 @@ const LumientFirst: NextPage = () => (
               show: {
                 opacity: 1,
                 transition: {
-                  delay: 0.75,
+                  delay: 1.5,
                 },
               },
             }}
           >
+            <div>
+              <div>
+                Lumient provides software development services for their
+                clients.
+              </div>
+              <div>
+                I am currently responsible for the development of a
+                comprehensive management system for the AgTech industry.
+              </div>
+            </div>
+
+            <Timeline className="mt-16 -mb-8 pb-8" timeline={timeline} />
+
             <Link href="/about">
-              <a className="mt-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
+              <a className="my-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
                 <ArrowLeftIcon className="mr-2 w-5 h-5" />
                 Go back
               </a>
@@ -46,4 +123,4 @@ const LumientFirst: NextPage = () => (
   </>
 );
 
-export default LumientFirst;
+export default LumientSecond;

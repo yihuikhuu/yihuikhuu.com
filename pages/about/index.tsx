@@ -129,12 +129,6 @@ const experiences = [
     href: "/about/lumient-first",
   },
   {
-    organisation: "University of Adelaide",
-    when: "2016",
-    description: "Collaborative project with the best and brightest.",
-    href: "/about/university-adelaide",
-  },
-  {
     organisation: "Andreyev Lawyers",
     when: "2019 - 2021",
     description:

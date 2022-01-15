@@ -1,18 +1,15 @@
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { classNames } from "helpers/classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
-import LetsTalkButton from "./LetsTalkButton";
+import LetsTalkButton from "components/LetsTalkButton";
 
 const navigation = [
   { name: "Home", href: "/", exact: true },
   { name: "About", href: "/about", exact: false },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 function isActive(currentPath: string, path: string, exact: boolean) {
   return exact ? currentPath == path : currentPath.startsWith(path);
