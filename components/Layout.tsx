@@ -216,7 +216,7 @@ const Layout: React.FC = ({ children }) => {
                   {children}
                 </div>
                 <div className="max-w-7xl mx-auto flex flex-col items-center px-4 sm:px-6">
-                  <h1 className="text-lg tracking-tight font-semibold text-gray-900 sm:text-xl md:text-2xl">
+                  <h1 className="text-lg tracking-tight font-semibold text-gray-900 sm:text-xl md:text-2xl dark:text-white">
                     <span className="block">Want to chat?</span>
                   </h1>
                   <LetsTalkButton className="mt-6" />
