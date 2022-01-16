@@ -3,11 +3,11 @@ import Head from "next/head";
 import Hero from "components/Hero";
 import Title from "components/Title";
 import { useContext } from "react";
-import ColourThemeContext from "contexts/colour-theme-context";
+import AccentColourContext from "contexts/accent-colour-context";
 import { classNames } from "helpers/classnames";
 
 const Contact: NextPage = () => {
-  const { theme } = useContext(ColourThemeContext);
+  const { colour } = useContext(AccentColourContext);
 
   return (
     <>
@@ -47,7 +47,7 @@ const Contact: NextPage = () => {
                     autoComplete="given-name"
                     className={classNames(
                       "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
-                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                      `focus:ring-${colour}-500 focus:border-${colour}-500`
                     )}
                     required
                   />
@@ -68,7 +68,7 @@ const Contact: NextPage = () => {
                     autoComplete="family-name"
                     className={classNames(
                       "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
-                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                      `focus:ring-${colour}-500 focus:border-${colour}-500`
                     )}
                     required
                   />
@@ -89,7 +89,7 @@ const Contact: NextPage = () => {
                     autoComplete="email"
                     className={classNames(
                       "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
-                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                      `focus:ring-${colour}-500 focus:border-${colour}-500`
                     )}
                     required
                   />
@@ -118,7 +118,7 @@ const Contact: NextPage = () => {
                     autoComplete="tel"
                     className={classNames(
                       "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
-                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                      `focus:ring-${colour}-500 focus:border-${colour}-500`
                     )}
                     aria-describedby="phone-optional"
                   />
@@ -138,7 +138,7 @@ const Contact: NextPage = () => {
                     id="subject"
                     className={classNames(
                       "transition-colors py-3 px-4 block w-full text-gray-900 border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
-                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                      `focus:ring-${colour}-500 focus:border-${colour}-500`
                     )}
                     required
                   />
@@ -163,7 +163,7 @@ const Contact: NextPage = () => {
                     rows={4}
                     className={classNames(
                       "transition-colors py-3 px-4 block w-full text-gray-900 border border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-white",
-                      `focus:ring-${theme}-500 focus:border-${theme}-500`
+                      `focus:ring-${colour}-500 focus:border-${colour}-500`
                     )}
                     aria-describedby="message-max"
                     defaultValue={""}
@@ -176,7 +176,7 @@ const Contact: NextPage = () => {
                   type="submit"
                   className={classNames(
                     "mt-2 w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:w-auto",
-                    `transition-colours bg-${theme}-600 hover:bg-${theme}-700 focus:ring-${theme}-500`
+                    `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
                   )}
                 >
                   Fire away

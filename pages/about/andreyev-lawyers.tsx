@@ -7,7 +7,7 @@ import Hero from "components/Hero";
 import Subtitle from "components/Subtitle";
 import Timeline, { TimelineEntry } from "components/Timeline";
 import Title from "components/Title";
-import ColourThemeContext from "contexts/colour-theme-context";
+import AccentColourContext from "contexts/accent-colour-context";
 import { motion } from "framer-motion";
 import { classNames } from "helpers/classnames";
 import { NextPage } from "next";
@@ -48,7 +48,7 @@ const timeline: TimelineEntry[] = [
     ],
     icon: GlobeAltIcon,
     iconBackground: "bg-gray-400",
-    iconList: [siPython, siJavascript, siDjango, siNextdotjs, siTailwindcss],
+    iconList: [siPython, siTypescript, siDjango, siNextdotjs, siTailwindcss],
   },
   {
     header: "Web - ASP.NET and Vue.js",
@@ -68,8 +68,8 @@ const timeline: TimelineEntry[] = [
 ];
 
 const AndreyevLawyers: NextPage = () => (
-  <ColourThemeContext.Consumer>
-    {({ theme }) => (
+  <AccentColourContext.Consumer>
+    {({ colour }) => (
       <>
         <Head>
           <title>Andreyev Lawyers - Yihui Khuu</title>
@@ -82,7 +82,7 @@ const AndreyevLawyers: NextPage = () => (
             <motion.span
               className={classNames(
                 "block",
-                `transition-colours text-${theme}-500`
+                `transition-colors text-${colour}-500`
               )}
               initial="hidden"
               animate="show"
@@ -165,7 +165,7 @@ const AndreyevLawyers: NextPage = () => (
                   <a
                     className={classNames(
                       "my-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
-                      `transition-colours bg-${theme}-600 hover:bg-${theme}-700 focus:ring-${theme}-500`
+                      `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
                     )}
                   >
                     <ArrowLeftIcon className="mr-2 w-5 h-5" />
@@ -178,7 +178,7 @@ const AndreyevLawyers: NextPage = () => (
         </div>
       </>
     )}
-  </ColourThemeContext.Consumer>
+  </AccentColourContext.Consumer>
 );
 
 export default AndreyevLawyers;

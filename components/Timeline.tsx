@@ -38,7 +38,7 @@ const Timeline: React.FC<TimelineProps> = ({ className, timeline }) => (
                 <event.icon className="h-5 w-5 text-white" aria-hidden="true" />
               </span>
             </div>
-            <div className="min-w-0 flex-1 pl-6 py-6 flex justify-between space-x-4">
+            <div className="min-w-0 flex-1 pl-3 py-6 flex justify-between space-x-4">
               <div>
                 <p className="transition-colors text-lg text-gray-700 dark:text-white">
                   {event.header}
@@ -51,12 +51,12 @@ const Timeline: React.FC<TimelineProps> = ({ className, timeline }) => (
                     <li key={`${eventIdx}-content-${index}`}>{content}</li>
                   ))}
                 </ul>
-                <div className="mt-6 flex gap-6">
+                <div className="mt-6 flex flex-wrap gap-6">
                   {event.iconList?.map((icon, index) =>
                     typeof icon === "string" || icon instanceof String ? (
                       <span
                         key={`${eventIdx}-${index}`}
-                        className="transition-colors h-10 flex items-center dark:text-white"
+                        className="transition-colors h-10 flex items-center dark:text-white whitespace-nowrap"
                       >
                         {icon}
                       </span>

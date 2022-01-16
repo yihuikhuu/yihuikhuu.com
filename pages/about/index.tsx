@@ -34,7 +34,7 @@ import IconCard, { IconType } from "components/IconCard";
 import Subtitle from "components/Subtitle";
 import Title from "components/Title";
 import { classNames } from "helpers/classnames";
-import ColourThemeContext from "contexts/colour-theme-context";
+import AccentColourContext from "contexts/accent-colour-context";
 
 const languages: IconType[] = [
   {
@@ -147,8 +147,8 @@ const experiences = [
 ];
 
 const About: NextPage = () => (
-  <ColourThemeContext.Consumer>
-    {({ theme }) => (
+  <AccentColourContext.Consumer>
+    {({ colour }) => (
       <>
         <Head>
           <title>About - Yihui Khuu</title>
@@ -161,7 +161,7 @@ const About: NextPage = () => (
             <motion.span
               className={classNames(
                 "flex flex-col sm:flex-row",
-                `transition-colours text-${theme}-500`
+                `transition-colors text-${colour}-500`
               )}
               initial="hidden"
               animate="show"
@@ -210,13 +210,13 @@ const About: NextPage = () => (
                         <span
                           className={classNames(
                             "transition-colors block",
-                            `text-${theme}-600 dark:text-${theme}-400`
+                            `text-${colour}-600 dark:text-${colour}-400`
                           )}
                         >
                           {t.name}
                         </span>
                       </Title>
-                      <div className="mt-8 px-8 grid gap-4 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12">
+                      <div className="mt-8 grid gap-4 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12">
                         {t.items.map((l) =>
                           l.href ? (
                             <Link key={l.name} href={l.href}>
@@ -295,7 +295,7 @@ const About: NextPage = () => (
         </div>
       </>
     )}
-  </ColourThemeContext.Consumer>
+  </AccentColourContext.Consumer>
 );
 
 export default About;

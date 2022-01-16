@@ -8,7 +8,7 @@ import Hero from "components/Hero";
 import Subtitle from "components/Subtitle";
 import Timeline, { TimelineEntry } from "components/Timeline";
 import Title from "components/Title";
-import ColourThemeContext from "contexts/colour-theme-context";
+import AccentColourContext from "contexts/accent-colour-context";
 import { motion } from "framer-motion";
 import { classNames } from "helpers/classnames";
 import { NextPage } from "next";
@@ -54,7 +54,7 @@ const timeline: TimelineEntry[] = [
       "Implemented generation of marketing materials based on user-provided templates and the Adobe Indesign SDK.",
       "Responsible for ongoing maintenance and additional features.",
     ],
-    icon: DeviceMobileIcon,
+    icon: GlobeAltIcon,
     iconBackground: "bg-gray-400",
     iconList: [siCsharp, siJquery, siDotnet],
   },
@@ -104,8 +104,8 @@ const timeline: TimelineEntry[] = [
 ];
 
 const LumientFirst: NextPage = () => (
-  <ColourThemeContext.Consumer>
-    {({ theme }) => (
+  <AccentColourContext.Consumer>
+    {({ colour }) => (
       <>
         <Head>
           <title>Lumient - Yihui Khuu</title>
@@ -121,7 +121,7 @@ const LumientFirst: NextPage = () => (
             <motion.span
               className={classNames(
                 "block",
-                `transition-colours text-${theme}-500`
+                `transition-colors text-${colour}-500`
               )}
               initial="hidden"
               animate="show"
@@ -200,7 +200,7 @@ const LumientFirst: NextPage = () => (
                   <a
                     className={classNames(
                       "my-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
-                      `transition-colours bg-${theme}-600 hover:bg-${theme}-700 focus:ring-${theme}-500`
+                      `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
                     )}
                   >
                     <ArrowLeftIcon className="mr-2 w-5 h-5" />
@@ -213,7 +213,7 @@ const LumientFirst: NextPage = () => (
         </div>
       </>
     )}
-  </ColourThemeContext.Consumer>
+  </AccentColourContext.Consumer>
 );
 
 export default LumientFirst;
