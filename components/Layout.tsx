@@ -11,6 +11,8 @@ import AccentColourContext, {
 import AccentColourSelector from "./AccentColourSelector";
 import ThemeContext, { ThemeOptions } from "contexts/theme-context";
 import ThemeSelector from "./ThemeSelector";
+import { siLinkedin } from "simple-icons/icons";
+import Icon from "./Icon";
 
 const navigation = [
   { name: "Home", href: "/", exact: true },
@@ -222,7 +224,16 @@ const Layout: React.FC = ({ children }) => {
                   <LetsTalkButton className="mt-6" />
                 </div>
                 <div>
-                  <div className="max-w-7xl mx-auto pt-16 pb-4 px-4 sm:pt-16 sm:pb-4 sm:px-6 lg:px-8">
+                  <div className="max-w-7xl mx-auto flex flex-col items-center pt-16 pb-4 px-4 sm:pt-16 sm:pb-4 sm:px-6 lg:px-8">
+                    <Link href="https://www.linkedin.com/in/yihuikhuu">
+                      <a
+                        className="w-8 h-8"
+                        target="_blank"
+                        rel="noopener nofollow"
+                      >
+                        <Icon icon={siLinkedin} size={24} />
+                      </a>
+                    </Link>
                     <h2 className="transition-colors text-center text-gray-600 text-sm tracking-wide dark:text-gray-300">
                       © 2022 Yihui Khuu
                     </h2>
