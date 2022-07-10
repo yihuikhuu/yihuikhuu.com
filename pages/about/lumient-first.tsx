@@ -21,7 +21,6 @@ import {
   siDotnet,
   siFlask,
   siIos,
-  siJava,
   siJavascript,
   siJquery,
   siLeaflet,
@@ -43,7 +42,7 @@ const timeline: TimelineEntry[] = [
     ],
     icon: DeviceMobileIcon,
     iconBackground: "bg-gray-400",
-    iconList: ["Obj-C", siJava, siIos, siAndroid],
+    iconList: ["Obj-C", siIos, siAndroid],
   },
   {
     header: "Web - ASP.NET, Razor and JQuery",
