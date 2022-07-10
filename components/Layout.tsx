@@ -44,7 +44,11 @@ function getAccentColour(): AccentColourOptions {
   );
 }
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
 
   const [theme, setTheme] = useState<ThemeOptions>("light");

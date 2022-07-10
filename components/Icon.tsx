@@ -5,7 +5,7 @@ export type IconProps = {
   size: number;
 };
 
-const Icon: React.FC<IconProps> = ({ icon, size }) => {
+const Icon = ({ icon, size }: IconProps) => {
   return (
     <svg
       role="img"

@@ -16,12 +16,12 @@ type TimelineProps = {
   timeline: TimelineEntry[];
 };
 
-const Timeline: React.FC<TimelineProps> = ({ className, timeline }) => (
+const Timeline = ({ className, timeline }: TimelineProps) => (
   <ul role="list" className={className}>
     {timeline.map((event, eventIdx) => (
       <li key={eventIdx}>
         <div className="relative pb-8">
-          {eventIdx !== timeline.length - 1 ? (
+          {eventIdx !== timeline.length ? (
             <span
               className="transition-colors absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 dark:bg-gray-600"
               aria-hidden="true"

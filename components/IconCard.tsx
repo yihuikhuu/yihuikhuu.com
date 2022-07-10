@@ -13,7 +13,7 @@ type IconCardProps = {
   icon: IconType;
 };
 
-const IconCard: React.FC<IconCardProps> = ({ icon }) => (
+const IconCard = ({ icon }: IconCardProps) => (
   <AccentColourContext.Consumer>
     {({ colour }) => (
       <div className="flex flex-col items-center">

@@ -8,7 +8,7 @@ type ThemeSelectorProps = {
   className?: string;
 };
 
-const ThemeSelector: React.FC<ThemeSelectorProps> = ({ className }) => (
+const ThemeSelector = ({ className }: ThemeSelectorProps) => (
   <ThemeContext.Consumer>
     {({ theme, setTheme }) => (
       <AccentColourContext.Consumer>

@@ -6,7 +6,7 @@ type LetsTalkButtonProps = {
   className?: string;
 };
 
-const LetsTalkButton: React.FC<LetsTalkButtonProps> = ({ className }) => (
+const LetsTalkButton = ({ className }: LetsTalkButtonProps) => (
   <AccentColourContext.Consumer>
     {({ colour }) => (
       <span className={className + " inline-flex rounded-md shadow"}>

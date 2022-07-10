@@ -1,8 +1,9 @@
 type SubtitleProps = {
+  children: React.ReactNode;
   className?: string;
 };
 
-const Subtitle: React.FC<SubtitleProps> = ({ children, className }) => (
+const Subtitle = ({ children, className }: SubtitleProps) => (
   <h2
     className={
       className +

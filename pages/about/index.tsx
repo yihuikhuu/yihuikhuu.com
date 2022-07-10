@@ -5,7 +5,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Fragment } from "react";
 import {
-  siAmazonaws,
   siAndroid,
   siBootstrap,
   siCsharp,
@@ -16,8 +15,6 @@ import {
   siGooglechrome,
   siGraphql,
   siIos,
-  siJava,
-  siMicrosoftazure,
   siMicrosoftsqlserver,
   siNextdotjs,
   siPostgresql,
@@ -50,8 +47,7 @@ const languages: IconType[] = [
   { name: "Python", icon: siPython, href: "https://www.python.org/" },
   { name: "Elixir", icon: siElixir, href: "https://elixir-lang.org/" },
   { name: "Swift", icon: siSwift, href: "https://www.swift.org/" },
-  { name: "Java", icon: siJava, href: "https://www.java.com/" },
-  // { name: "Go", icon: siGo, href: "https://golang.org/" },
+  { name: "Go", icon: siGo, href: "https://golang.org/" },
 ];
 
 const databases: IconType[] = [
@@ -92,8 +88,6 @@ const platforms: IconType[] = [
   { name: "iOS", icon: siIos },
   { name: "Windows", icon: siWindows },
   { name: "Android", icon: siAndroid },
-  // { name: "AWS", icon: siAmazonaws },
-  // { name: "Azure", icon: siMicrosoftazure },
 ];
 
 const toolbox = [

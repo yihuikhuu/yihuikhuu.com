@@ -8,9 +8,7 @@ type AccentColourSelectorProps = {
   className?: string;
 };
 
-const AccentColourSelector: React.FC<AccentColourSelectorProps> = ({
-  className,
-}) => (
+const AccentColourSelector = ({ className }: AccentColourSelectorProps) => (
   <AccentColourContext.Consumer>
     {({ colour, setColour: setTheme }) => (
       <Popover className={className + " relative h-6 w-6"}>

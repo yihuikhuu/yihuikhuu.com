@@ -1,6 +1,7 @@
 type TitleSize = "large" | "base" | "small";
 
 type TitleProps = {
+  children: React.ReactNode;
   className?: string;
   size: TitleSize;
 };
@@ -13,7 +14,7 @@ const classNames: Record<TitleSize, string> = {
     "text-lg tracking-tight font-semibold text-gray-900 dark:text-white sm:text-xl md:text-2xl",
 };
 
-const Title: React.FC<TitleProps> = ({ children, className, size }) => (
+const Title = ({ children, className, size }: TitleProps) => (
   <h1 className={className + " transition " + classNames[size]}>{children}</h1>
 );
 
