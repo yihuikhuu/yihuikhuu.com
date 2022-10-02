@@ -12,7 +12,7 @@ module.exports = {
   safelist: [
     {
       pattern:
-        /(bg|border|text|ring)-(violet|teal|sky|lime|pink)-(200|500|600|700)/,
+        /^(bg|border|text|ring)-(violet|teal|sky|lime|pink)-(200|500|600|700)$/,
       variants: ["hover", "focus", "dark", "dark:hover"],
     },
   ],
