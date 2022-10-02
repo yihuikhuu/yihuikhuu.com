@@ -1,9 +1,9 @@
 import {
   ArrowLeftIcon,
-  DesktopComputerIcon,
-  DeviceMobileIcon,
+  ComputerDesktopIcon,
+  DevicePhoneMobileIcon,
   GlobeAltIcon,
-} from "@heroicons/react/outline";
+} from "@heroicons/react/24/outline";
 import Hero from "components/Hero";
 import Subtitle from "components/Subtitle";
 import Timeline, { TimelineEntry } from "components/Timeline";
@@ -40,7 +40,7 @@ const timeline: TimelineEntry[] = [
       "Created custom charting code using Core Graphics API for iOS and assisted in the development of similar library with Android's Canvas API.",
       "Implemented app design and custom communications protocol according to client specifications.",
     ],
-    icon: DeviceMobileIcon,
+    icon: DevicePhoneMobileIcon,
     iconBackground: "bg-gray-400",
     iconList: ["Obj-C", siIos, siAndroid],
   },
@@ -64,7 +64,7 @@ const timeline: TimelineEntry[] = [
       "An all-in-one internal management tool for the client to manage clients, schedule tasks, and generate forms.",
       "Worked with client to redesign interface and workflow.",
     ],
-    icon: DesktopComputerIcon,
+    icon: ComputerDesktopIcon,
     iconBackground: "bg-gray-400",
     iconList: [siCsharp, siXaml, siDotnet],
   },

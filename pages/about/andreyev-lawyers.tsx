@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, GlobeAltIcon } from "@heroicons/react/outline";
+import { ArrowLeftIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import Hero from "components/Hero";
 import Subtitle from "components/Subtitle";
 import Timeline, { TimelineEntry } from "components/Timeline";

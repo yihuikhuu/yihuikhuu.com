@@ -1,5 +1,5 @@
 import { Switch } from "@headlessui/react";
-import { MoonIcon, SunIcon } from "@heroicons/react/outline";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import AccentColourContext from "contexts/accent-colour-context";
 import ThemeContext from "contexts/theme-context";
 import { classNames } from "helpers/classnames";

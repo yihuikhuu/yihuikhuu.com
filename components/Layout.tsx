@@ -1,5 +1,5 @@
-import { Popover, Switch, Transition } from "@headlessui/react";
-import { MenuIcon, MoonIcon, SunIcon, XIcon } from "@heroicons/react/outline";
+import { Popover, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { classNames } from "helpers/classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -61,7 +61,6 @@ const Layout = ({ children }: LayoutProps) => {
   }, []);
 
   function setAndStoreTheme(theme: ThemeOptions) {
-    console.log(theme);
     setTheme(theme);
     storeTheme(theme);
   }
@@ -104,7 +103,7 @@ const Layout = ({ children }: LayoutProps) => {
                                   <span className="sr-only">
                                     Open main menu
                                   </span>
-                                  <MenuIcon
+                                  <Bars3Icon
                                     className="h-6 w-6"
                                     aria-hidden="true"
                                   />
@@ -172,7 +171,7 @@ const Layout = ({ children }: LayoutProps) => {
                                   <span className="sr-only">
                                     Close main menu
                                   </span>
-                                  <XIcon
+                                  <XMarkIcon
                                     className="h-6 w-6"
                                     aria-hidden="true"
                                   />

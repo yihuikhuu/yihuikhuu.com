@@ -1,4 +1,4 @@
-import { ArrowLeftIcon } from "@heroicons/react/outline";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Head from "next/head";
