@@ -11,7 +11,7 @@ import AccentColourContext, {
 import AccentColourSelector from "./AccentColourSelector";
 import ThemeContext, { ThemeOptions } from "contexts/theme-context";
 import ThemeSelector from "./ThemeSelector";
-import { siLinkedin } from "simple-icons/icons";
+import { siLinkedin } from "simple-icons";
 import Icon from "./Icon";
 
 const navigation = [
@@ -90,11 +90,9 @@ const Layout = ({ children }: LayoutProps) => {
                           <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                             <div className="flex items-center justify-between w-full md:w-auto">
                               <Link href="/">
-                                <a>
-                                  <div className="transition-colors text-xl font-semibold dark:text-white">
-                                    Yihui Khuu
-                                  </div>
-                                </a>
+                                <div className="transition-colors text-xl font-semibold dark:text-white">
+                                  Yihui Khuu
+                                </div>
                               </Link>
                               <div className="-mr-2 flex items-center md:hidden">
                                 <AccentColourSelector className="mr-6" />
@@ -113,30 +111,30 @@ const Layout = ({ children }: LayoutProps) => {
                           </div>
                           <div className="hidden md:flex md:space-x-4">
                             {navigation.map((item) => (
-                              <Link key={item.name} href={item.href}>
-                                <a
-                                  className={classNames(
-                                    isActive(
-                                      router.pathname,
-                                      item.href,
-                                      item.exact
-                                    )
-                                      ? "bg-gray-200  text-gray-800 dark:bg-gray-600 dark:text-white"
-                                      : "text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700",
-                                    "transition px-3 py-2 font-medium text-sm rounded-md"
-                                  )}
-                                  aria-current={
-                                    isActive(
-                                      router.pathname,
-                                      item.href,
-                                      item.exact
-                                    )
-                                      ? "page"
-                                      : undefined
-                                  }
-                                >
-                                  {item.name}
-                                </a>
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                className={classNames(
+                                  isActive(
+                                    router.pathname,
+                                    item.href,
+                                    item.exact
+                                  )
+                                    ? "bg-gray-200  text-gray-800 dark:bg-gray-600 dark:text-white"
+                                    : "text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700",
+                                  "transition px-3 py-2 font-medium text-sm rounded-md"
+                                )}
+                                aria-current={
+                                  isActive(
+                                    router.pathname,
+                                    item.href,
+                                    item.exact
+                                  )
+                                    ? "page"
+                                    : undefined
+                                }
+                              >
+                                {item.name}
                               </Link>
                             ))}
                           </div>
@@ -180,37 +178,38 @@ const Layout = ({ children }: LayoutProps) => {
                             </div>
                             <div className="px-2 pt-2 pb-3 space-y-1">
                               {navigation.map((item) => (
-                                <Link key={item.name} href={item.href}>
-                                  <a
-                                    className={classNames(
-                                      isActive(
-                                        router.pathname,
-                                        item.href,
-                                        item.exact
-                                      )
-                                        ? "bg-gray-200 text-gray-800"
-                                        : "text-gray-600 hover:text-gray-800 hover:bg-gray-100",
-                                      "transition block px-3 py-2 rounded-md text-base font-medium text-gray-700"
-                                    )}
-                                    aria-current={
-                                      isActive(
-                                        router.pathname,
-                                        item.href,
-                                        item.exact
-                                      )
-                                        ? "page"
-                                        : undefined
-                                    }
-                                  >
-                                    {item.name}
-                                  </a>
+                                <Link
+                                  key={item.name}
+                                  href={item.href}
+                                  className={classNames(
+                                    isActive(
+                                      router.pathname,
+                                      item.href,
+                                      item.exact
+                                    )
+                                      ? "bg-gray-200 text-gray-800"
+                                      : "text-gray-600 hover:text-gray-800 hover:bg-gray-100",
+                                    "transition block px-3 py-2 rounded-md text-base font-medium text-gray-700"
+                                  )}
+                                  aria-current={
+                                    isActive(
+                                      router.pathname,
+                                      item.href,
+                                      item.exact
+                                    )
+                                      ? "page"
+                                      : undefined
+                                  }
+                                >
+                                  {item.name}
                                 </Link>
                               ))}
                             </div>
-                            <Link href="/contact">
-                              <a className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700">
-                                Let&apos;s talk
-                              </a>
+                            <Link
+                              href="/contact"
+                              className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700"
+                            >
+                              Let&apos;s talk
                             </Link>
                           </div>
                         </Popover.Panel>
@@ -228,17 +227,16 @@ const Layout = ({ children }: LayoutProps) => {
                 </div>
                 <div>
                   <div className="max-w-7xl mx-auto flex flex-col items-center pt-16 pb-4 px-4 sm:pt-16 sm:pb-4 sm:px-6 lg:px-8">
-                    <Link href="https://www.linkedin.com/in/yihuikhuu">
-                      <a
-                        className="w-8 h-8"
-                        target="_blank"
-                        rel="noopener nofollow"
-                      >
-                        <Icon icon={siLinkedin} size={24} />
-                      </a>
+                    <Link
+                      href="https://www.linkedin.com/in/yihuikhuu"
+                      className="w-8 h-8"
+                      target="_blank"
+                      rel="noopener nofollow"
+                    >
+                      <Icon icon={siLinkedin} size={24} />
                     </Link>
                     <h2 className="transition-colors text-center text-gray-600 text-sm tracking-wide dark:text-gray-300">
-                      © 2022 Yihui Khuu
+                      © 2023 Yihui Khuu
                     </h2>
                   </div>
                 </div>

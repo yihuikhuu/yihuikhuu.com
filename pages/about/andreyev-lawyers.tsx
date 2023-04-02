@@ -20,7 +20,7 @@ import {
   siTailwindcss,
   siTypescript,
   siVuedotjs,
-} from "simple-icons/icons";
+} from "simple-icons";
 
 const timeline: TimelineEntry[] = [
   {
@@ -157,16 +157,15 @@ const AndreyevLawyers: NextPage = () => (
                   timeline={timeline}
                 />
 
-                <Link href="/about">
-                  <a
-                    className={classNames(
-                      "my-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
-                      `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
-                    )}
-                  >
-                    <ArrowLeftIcon className="mr-2 w-5 h-5" />
-                    Go back
-                  </a>
+                <Link
+                  href="/about"
+                  className={classNames(
+                    "my-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
+                    `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
+                  )}
+                >
+                  <ArrowLeftIcon className="mr-2 w-5 h-5" />
+                  Go back
                 </Link>
               </motion.div>
             </div>

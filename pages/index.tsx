@@ -36,7 +36,7 @@ const Home: NextPage = () => {
               show: {
                 opacity: 1,
                 transition: {
-                  delay: 0.75,
+                  delay: 0.5,
                 },
               },
             }}
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
               show: {
                 opacity: 1,
                 transition: {
-                  delay: 1.5,
+                  delay: 1,
                 },
               },
             }}
@@ -79,21 +79,20 @@ const Home: NextPage = () => {
                 show: {
                   opacity: 1,
                   transition: {
-                    delay: 1.5,
+                    delay: 1,
                   },
                 },
               }}
             >
-              <Link href="/about">
-                <a
-                  className={classNames(
-                    "mt-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
-                    `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
-                  )}
-                >
-                  More about me
-                  <ArrowRightIcon className="ml-2 w-5 h-5" />
-                </a>
+              <Link
+                href="/about"
+                className={classNames(
+                  "mt-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
+                  `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
+                )}
+              >
+                More about me
+                <ArrowRightIcon className="ml-2 w-5 h-5" />
               </Link>
             </motion.div>
           </div>

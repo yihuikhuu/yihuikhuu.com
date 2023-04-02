@@ -1,12 +1,13 @@
 import { classNames } from "helpers/classnames";
 import { SimpleIcon } from "simple-icons";
 import Icon from "components/Icon";
+import { GlobeAltIcon } from "@heroicons/react/24/outline";
 
 export type TimelineEntry = {
   header: string;
   shortDescription: string;
   content: string[];
-  icon: (props: React.ComponentProps<"svg">) => JSX.Element;
+  icon: typeof GlobeAltIcon;
   iconBackground: string;
   iconList: (string | SimpleIcon)[];
 };

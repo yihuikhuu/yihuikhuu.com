@@ -25,7 +25,7 @@ import {
   siTypescript,
   siVuedotjs,
   siWindows,
-} from "simple-icons/icons";
+} from "simple-icons";
 import Hero from "components/Hero";
 import IconCard, { IconType } from "components/IconCard";
 import Subtitle from "components/Subtitle";
@@ -213,14 +213,13 @@ const About: NextPage = () => (
                       <div className="mt-8 grid gap-4 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12">
                         {t.items.map((l) =>
                           l.href ? (
-                            <Link key={l.name} href={l.href}>
-                              <a
-                                key={l.name}
-                                target="_blank"
-                                rel="noopener nofollow"
-                              >
-                                <IconCard icon={l} />
-                              </a>
+                            <Link
+                              key={l.name}
+                              href={l.href}
+                              target="_blank"
+                              rel="noopener nofollow"
+                            >
+                              <IconCard icon={l} />
                             </Link>
                           ) : (
                             <IconCard key={l.name} icon={l} />
@@ -244,41 +243,42 @@ const About: NextPage = () => (
                     .reverse()
                     .map((experience, index) => (
                       <li key={`experience-${index}`}>
-                        <Link href={experience.href}>
-                          <a className="transition block hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <div className="flex items-center px-4 py-6 sm:px-6">
-                              <div className="min-w-0 flex-1 flex items-center gap-8">
-                                <p className="transition-colors flex-shrink-0 dark:text-white">
-                                  {(experiences.length - index)
-                                    .toString()
-                                    .padStart(2, "0")}
-                                </p>
-                                <div className="min-w-0 flex-1 px-4 items-center md:grid md:grid-cols-2 md:gap-4">
-                                  <Title size="small">
-                                    <p className="font-medium truncate">
-                                      {experience.organisation}
-                                    </p>
-                                  </Title>
+                        <Link
+                          href={experience.href}
+                          className="transition block hover:bg-gray-50 dark:hover:bg-gray-600"
+                        >
+                          <div className="flex items-center px-4 py-6 sm:px-6">
+                            <div className="min-w-0 flex-1 flex items-center gap-8">
+                              <p className="transition-colors flex-shrink-0 dark:text-white">
+                                {(experiences.length - index)
+                                  .toString()
+                                  .padStart(2, "0")}
+                              </p>
+                              <div className="min-w-0 flex-1 px-4 items-center md:grid md:grid-cols-2 md:gap-4">
+                                <Title size="small">
+                                  <p className="font-medium truncate">
+                                    {experience.organisation}
+                                  </p>
+                                </Title>
+                                <div>
                                   <div>
-                                    <div>
-                                      <p className="transition-colors text-sm text-gray-900 dark:text-white">
-                                        {experience.when}
-                                      </p>
-                                    </div>
+                                    <p className="transition-colors text-sm text-gray-900 dark:text-white">
+                                      {experience.when}
+                                    </p>
                                   </div>
-                                  <Subtitle className="col-span-2">
-                                    <span>{experience.description}</span>
-                                  </Subtitle>
                                 </div>
-                              </div>
-                              <div>
-                                <ArrowRightIcon
-                                  className="h-5 w-5 text-gray-400"
-                                  aria-hidden="true"
-                                />
+                                <Subtitle className="col-span-2">
+                                  <span>{experience.description}</span>
+                                </Subtitle>
                               </div>
                             </div>
-                          </a>
+                            <div>
+                              <ArrowRightIcon
+                                className="h-5 w-5 text-gray-400"
+                                aria-hidden="true"
+                              />
+                            </div>
+                          </div>
                         </Link>
                       </li>
                     ))}

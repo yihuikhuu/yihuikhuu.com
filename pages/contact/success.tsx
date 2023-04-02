@@ -62,16 +62,15 @@ const Success: NextPage = () => (
                   },
                 }}
               >
-                <Link href="/">
-                  <a
-                    className={classNames(
-                      "mt-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
-                      `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
-                    )}
-                  >
-                    <ArrowLeftIcon className="mr-2 w-5 h-5" />
-                    Go back
-                  </a>
+                <Link
+                  href="/"
+                  className={classNames(
+                    "mt-8 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
+                    `transition-colors bg-${colour}-600 hover:bg-${colour}-700 focus:ring-${colour}-500`
+                  )}
+                >
+                  <ArrowLeftIcon className="mr-2 w-5 h-5" />
+                  Go back
                 </Link>
               </motion.div>
             </div>
