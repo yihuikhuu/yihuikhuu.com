@@ -7,9 +7,9 @@ const nextConfig = {
     defaultLocale: "en",
   },
   async headers() {
-    let csp = `default-src 'self'; script-src 'self'`
-    if (process.env.NODE_ENV !== 'production') {
-      csp = `style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self'`
+    let csp = `default-src 'self' 'unsafe-inline'; script-src 'self'`;
+    if (process.env.NODE_ENV !== "production") {
+      csp = `style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self'`;
     }
     return [
       {
@@ -17,12 +17,12 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: csp
-          }
+            value: csp,
+          },
         ],
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
