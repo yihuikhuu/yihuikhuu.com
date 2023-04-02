@@ -29,7 +29,7 @@ const Home: NextPage = () => (
             show: {
               opacity: 1,
               transition: {
-                delay: 0.5,
+                delay: 0.75,
               },
             },
           }}
@@ -48,7 +48,7 @@ const Home: NextPage = () => (
             show: {
               opacity: 1,
               transition: {
-                delay: 1,
+                delay: 1.5,
               },
             },
           }}
@@ -72,7 +72,7 @@ const Home: NextPage = () => (
               show: {
                 opacity: 1,
                 transition: {
-                  delay: 1,
+                  delay: 1.5,
                 },
               },
             }}
