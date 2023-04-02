@@ -6,6 +6,13 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  modularizeImports: {
+    "simple-icons": {
+      transform: "simple-icons/icons",
+      preventFullImport: true,
+      skipDefaultConversion: true,
+    },
+  },
   async headers() {
     let csp = `default-src 'self' 'unsafe-inline'; script-src 'self'`;
     if (process.env.NODE_ENV !== "production") {
@@ -25,4 +32,8 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
+module.exports = withBundleAnalyzer(nextConfig);

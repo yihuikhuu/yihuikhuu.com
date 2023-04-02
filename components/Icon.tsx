@@ -1,4 +1,4 @@
-import { SimpleIcon } from "simple-icons";
+import type { SimpleIcon } from "simple-icons";
 
 export type IconProps = {
   icon: SimpleIcon;

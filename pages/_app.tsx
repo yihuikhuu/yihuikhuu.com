@@ -1,12 +1,12 @@
 import "styles/globals.css";
 import type { AppProps } from "next/app";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Layout from "components/Layout";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <Layout>
-      <motion.div
+      <m.div
         key={router.route}
         initial="initial"
         animate="animate"
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         }}
       >
         <Component {...pageProps} />
-      </motion.div>
+      </m.div>
     </Layout>
   );
 }
