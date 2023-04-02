@@ -7,7 +7,6 @@ import Hero from "components/Hero";
 import Subtitle from "components/Subtitle";
 import Title from "components/Title";
 import { classNames } from "helpers/classnames";
-import { useContext } from "react";
 
 const Home: NextPage = () => (
   <>

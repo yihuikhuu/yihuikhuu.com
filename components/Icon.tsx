@@ -9,7 +9,7 @@ const Icon = ({ icon, size }: IconProps) => {
   return (
     <svg
       role="img"
-      viewBox={`0 0 ${size} ${size}`}
+      viewBox={`0 0 24 24`}
       height={size}
       width={size}
       fill={`#${icon.hex}`}
