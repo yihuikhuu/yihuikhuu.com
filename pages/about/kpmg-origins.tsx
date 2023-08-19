@@ -1,39 +1,65 @@
 import { ArrowLeftIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import Hero from "components/Hero";
-import Subtitle from "components/Subtitle";
 import Timeline, { TimelineEntry } from "components/Timeline";
-import Title from "components/Title";
-import { m } from "framer-motion";
 import { classNames } from "helpers/classnames";
 import { NextPage } from "next";
 import Head from "next/head";
+import { m } from "framer-motion";
+import { siCsharp, siDotnet, siReact, siTypescript } from "simple-icons";
+import Title from "components/Title";
+import Subtitle from "components/Subtitle";
 import Link from "next/link";
-import { siCsharp, siDotnet, siTypescript, siVuedotjs } from "simple-icons";
 
 const timeline: TimelineEntry[] = [
   {
-    header: "Web - ASP.NET and Vue.js",
-    shortDescription: "AgTech Management System",
+    header: "Building Trustworthy Indicator",
+    shortDescription:
+      "Developing and launching the Building Trustworthy Indicator",
     content: [
-      "Designed and implemented architecture of software application.",
-      "Liase with client to determine and refine requirements.",
-      "Implement app design according to UI/UX design documentation, and make adjustments according to client feedback.",
+      "Rapidly integrated into the existing team",
+      "Made significant contributions to the project, resulting in the successful launch of the project",
     ],
     icon: GlobeAltIcon,
     iconBackground: "bg-gray-400",
-    iconList: [siCsharp, siTypescript, siDotnet, siVuedotjs],
+    iconList: [siCsharp, siDotnet, siTypescript, siReact],
+  },
+  {
+    header: "Asset Impact",
+    shortDescription: "Developing and launching the Asset Impact solution",
+    content: [
+      "Responsible for a large portion of the development of the original Asset Impact solution",
+      "Critical to the successful launch of the project",
+    ],
+    icon: GlobeAltIcon,
+    iconBackground: "bg-gray-400",
+    iconList: [siCsharp, siDotnet, siTypescript, siReact],
+  },
+  {
+    header: "Integrated Waste Tracking Solution",
+    shortDescription:
+      "Leading a team to develop and launch the Integrated Waste Tracking Solution",
+    content: [
+      "Team lead and technical mentor for the Integrated Waste Tracking Solution project",
+      "Successfully led a team in the development of the IWTS project, and was responsible for its successful launch",
+    ],
+    icon: GlobeAltIcon,
+    iconBackground: "bg-gray-400",
+    iconList: [siCsharp, siDotnet, siTypescript, siReact],
   },
 ];
 
-const LumientSecond: NextPage = () => (
+const KpmgOrigins: NextPage = () => (
   <>
     <Head>
-      <title>Lumient - Yihui Khuu</title>
-      <meta name="description" content="Yihui Khuu at Lumient 2021 - 2022" />
+      <title>KPMG Origins - Yihui Khuu</title>
+      <meta
+        name="description"
+        content="Yihui Khuu at KPMG Origins 2022 - Now"
+      />
     </Head>
     <Hero>
       <Title size="large">
-        <span className="block">Lumient.</span>
+        <span className="block">KPMG Origins</span>
 
         <m.span
           className={classNames("block", `transition-colors text-accent-500`)}
@@ -51,7 +77,7 @@ const LumientSecond: NextPage = () => (
             },
           }}
         >
-          Fullstack Web + DevOps.
+          Fullstack Web + Lead.
         </m.span>
       </Title>
       <Subtitle className="mt-3 max-w-md">
@@ -70,7 +96,7 @@ const LumientSecond: NextPage = () => (
             },
           }}
         >
-          2021 - Now
+          2022 - Now
         </m.span>
       </Subtitle>
     </Hero>
@@ -94,13 +120,10 @@ const LumientSecond: NextPage = () => (
             }}
           >
             <div className="transition-colors dark:text-white">
+              <div>KPMG Origins, a venture backed by KPMG</div>
               <div>
-                Lumient provides software development services for their
-                clients.
-              </div>
-              <div>
-                I was responsible for the development of a comprehensive
-                management system for the AgTech industry.
+                Responsible for the development of several core parts of the
+                Origins platform.
               </div>
             </div>
 
@@ -123,4 +146,4 @@ const LumientSecond: NextPage = () => (
   </>
 );
 
-export default LumientSecond;
+export default KpmgOrigins;

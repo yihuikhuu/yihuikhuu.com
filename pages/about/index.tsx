@@ -206,10 +206,16 @@ const experiences = [
   },
   {
     organisation: "Lumient",
-    when: "2021 - Now",
+    when: "2021 - 2022",
     description:
       "Developing a comprehensive management system for the AgTech industry.",
     href: "/about/lumient-second",
+  },
+  {
+    organisation: "KPMG Origins",
+    when: "2022 - Now",
+    description: "Developing core parts of the Origins platform.",
+    href: "/about/kpmg-origins",
   },
 ];
 
